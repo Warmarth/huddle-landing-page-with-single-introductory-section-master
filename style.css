@@ -12,9 +12,10 @@
   --font-family2: "Poppins", sans-serif;
 }
 body {
-  display: grid;
-  place-items: center;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .general {
   background-color: var(--Violet);
