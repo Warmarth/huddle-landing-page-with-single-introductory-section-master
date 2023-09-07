@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+:root {
+  --Violet: hsl(257, 40%, 49%);
+  --Soft-Magenta: hsl(300, 69%, 71%);
+  --font-family1: "Open Sans", sans-serif;
+  --font-family2: "Poppins", sans-serif;
+}
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+.general {
+  background-color: var(--Violet);
+  max-width: 375px;
+  background-image: url("./images/bg-mobile.svg");
+  background-repeat: no-repeat;
+  padding-bottom: 1rem;
+}
+.logo-wrapper {
+  height: 100px;
+  display: flex;
+  margin-left: 2.5rem;
+}
+.logo-wrapper .logo {
+  width: 120px;
+}
+.mock-up-wrapper {
+  margin-top: 1.5rem;
+  margin-left: 2.5rem;
+}
+.mock-up-wrapper .mock-up {
+  width: 300px;
+}
+article {
+  max-width: 375px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1.5rem;
+  margin: 3rem 2rem;
+  text-align: center;
+  color: white;
+  font-family: var(--font-family1);
+  > h1 {
+    font-size: 25px;
+    font-family: var(--font-family2);
+    font-weight: 600;
+  }
+  > p {
+    font-size: 17px;
+  }
+}
+
+button {
+  color: var(--Violet);
+  padding: 1rem 5rem;
+  border-radius: 30px;
+  border: none;
+}
+.o:hover {
+  color: var(--Soft-Magenta);
+  border-color: var(--Soft-Magenta);
+}
+button:hover {
+  background-color: var(--Soft-Magenta);
+  color: azure;
+}
+.icons {
+  display: flex;
+  column-gap: 10px;
+  justify-content: center;
+}
+.o {
+  width: 2rem;
+  height: 2rem;
+  color: azure;
+  border: 1px solid azure;
+  border-radius: 50%;
+}
+.o:nth-child(2) {
+  padding-left: 4px;
+  order: -1;
+}
+.o:nth-child(3) {
+  padding-left: 1px;
+}
+i {
+  transform: translate(50%, 50%);
+}
+
+@media screen and (min-width: 800px) {
+  .general {
+    max-width: 100%;
+    background-image: url("./images/bg-desktop.svg");
+    background-color: var(--Violet);
+  }
+  .demo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  .logo-wrapper {
+    .logo {
+      width: 200px;
+    }
+  }
+  .mock-up-wrapper {
+    & .mock-up {
+      width: 750px;
+    }
+  }
+  article {
+    max-width: 100%;
+    text-align: left;
+    align-items: flex-start;
+    > h1 {
+      width: 25rem;
+      letter-spacing: 2px;
+    }
+    > p {
+      width: 30rem;
+    }
+  }
+  .icons {
+    justify-content: flex-end;
+    margin-right: 2rem;
+  }
+}
